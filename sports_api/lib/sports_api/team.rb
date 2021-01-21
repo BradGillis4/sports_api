@@ -26,7 +26,8 @@ class Team
 
     def self.find_team(team_name)
         self.all.find do |team|
-            team.strTeam == team_name
+             team.strTeam.downcase == team_name
+              
         end
     end
 end
